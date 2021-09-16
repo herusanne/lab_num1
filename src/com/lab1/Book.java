@@ -69,16 +69,16 @@ public class Book {
             // Name
             System.out.print("Enter the title of book: ");
             String title = scanner.nextLine();
-            dateOfBook.setSeller(title);
+            dateOfBook.setTitle(title);
 
             // Seller
             System.out.print("Enter the second name of seller: ");
             String seller = scanner.next();
-/*
-            System.out.print("Enter the second name of seller: ");
-            seller += " " + scanner.next();
+
+           // System.out.print("Enter the second name of seller: ");
+            //seller += " " + scanner.next();
             dateOfBook.setSeller(seller);
-*/
+
             // Number of books
             int quantity;
             do {
@@ -107,7 +107,7 @@ public class Book {
 
             // Date of sale
             while (true) {
-                System.out.print("Enter the date (d/m/y format): ");
+                System.out.print("Enter the date (dd/mm/yy format): ");
                 String date = scanner.next();
                 if (checkDate(date)) {
                     dateOfBook.setDateOfSale(date);
@@ -158,13 +158,5 @@ public class Book {
         return answer.toString();
     }
     */
-    @Override
-    public String toString() {
-        Book book = new Book();
-        if (book.getSeller() == "Ivanov") {
-            System.out.print(String.format("\n\n[RESULT]\nSeller: %s\nTitle: %d\nQuantity: %d\nPrice: %d\nDate of sale: %s\n",
-                    book.getSeller(), book.getTitle(), book.getQuantity(), book.getPrice(), book.getDateOfSale()));
-        }
-        return super.toString();
-    }
+
 }
