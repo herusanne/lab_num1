@@ -12,8 +12,10 @@ import java.util.Locale;
         public static void main(String[] args) throws Exception {
             Locale.setDefault(Locale.US);
             Scanner scanner = new Scanner(System.in);
-            Books books = SideStuff.generateBooks(scanner);
-            System.out.println(books.toString());
+           // Books books = SideStuff.generateBooks(scanner);
+           // System.out.println(books.toString());
+            Works works = SideStuff.generateWorker(scanner);
+            System.out.println(works.toString());
             scanner.close();
         }
     }

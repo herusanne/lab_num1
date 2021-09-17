@@ -50,7 +50,7 @@ public class SideStuff {
 
             String date;
             do {
-                System.out.print("Enter the date (dd/mm/yy format): ");
+                System.out.print("Enter the date (dd/mm/yyyy format): ");
                 date = scanner.next();
             } while(!checkDate(date));
 
@@ -113,7 +113,7 @@ public class SideStuff {
     }
 
     public static boolean checkDate(String date) {
-        String RegExp = "^([0-2][0-9]||3[0-1])/(0[0-9]||1[0-2])/([0-9][0-9])$";
+        String RegExp = "^([0-2][0-9]||3[0-1])/(0[0-9]||1[0-2])/([0-9][0-9])?[0-9][0-9]$";
         return date.matches(RegExp);
     }
 }

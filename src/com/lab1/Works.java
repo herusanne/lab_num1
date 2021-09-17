@@ -20,15 +20,30 @@ public class Works {
                 System.err.print("Error 404!");
             }
         }
-
     @Override
     public String toString() {
-
-
-    }
-   // LocalDate date = LocalDate.now();
-    public static int calculateAge(LocalDate birthDate, LocalDate currentDate) {
         Work work= new Work();
+        int age=0;
+        String[] year = work.now().split("///");
+        Integer[] intYear=new Integer[year.length];
+        int i=0;
+        for(String changer:year){
+            intYear[i]=Integer.parseInt(changer);//Exception in this line
+            i++;
+
+        }
+
+           // age=2021-intYear[i];
+
+        String ageFin= String.valueOf(age);
+        //System.out.println("\n[RESULT (YOUNGER)]\n"+age);
+        StringBuilder answer = new StringBuilder();
+        answer.append("\n[RESULT (YOUNGER)]\n");
+        answer.append(ageFin);
+        return answer.toString();
+   // LocalDate date = LocalDate.now();
+
+        /*
        String birth1;
        Date age=work.getDateOfBirth();
         Date birth = age.parse(birth1);
@@ -39,5 +54,6 @@ public class Works {
         } else {
             return 0;
         }
+        */
     }
 }

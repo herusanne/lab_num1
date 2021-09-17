@@ -67,7 +67,7 @@ public class Book {
 
     public void setDateOfSale(String dateOfSale) {
         try {
-            this.dateOfSale = (new SimpleDateFormat("dd/MM/y")).parse(dateOfSale);
+            this.dateOfSale = (new SimpleDateFormat("dd/MM/yyyy")).parse(dateOfSale);
         } catch (ParseException var3) {
         }
 

@@ -65,8 +65,15 @@ public class Work {
         } catch (ParseException pe) {
             System.err.println("Error!");
         }
-    }
 
+    }
+    public static final String DATE_FORMAT_NOW = "dd/MM/yyyy";
+
+    public static String now() {
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT_NOW);
+        return sdf.format(cal.getTime());
+    }
 }
 
 
