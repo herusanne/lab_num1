@@ -55,8 +55,9 @@ public class Work {
         this.salary = salary;
     }
 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
+    public String getDateOfBirth() {
+        SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT_NOW);
+        return sdf.format(this.dateOfBirth);
     }
 
     public void setDateOfBirth(String dateOfBirth) {
@@ -67,6 +68,7 @@ public class Work {
         }
 
     }
+
     public static final String DATE_FORMAT_NOW = "dd/MM/yyyy";
 
     public static String now() {
