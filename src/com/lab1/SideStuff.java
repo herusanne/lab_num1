@@ -61,14 +61,14 @@ public class SideStuff {
 
         return books;
     }
-    public static Works generateWorker(Scanner scanner) throws Exception {
-        System.out.print("Please input the quantity of workers: ");
+    public static Workers generateWorker(Scanner scanner) throws Exception {
+        System.out.print("\nPlease input the quantity of workers: ");
         final int num = scanner.nextInt();
         scanner.nextLine();
 
-        Works worker = new Works();
+        Workers worker = new Workers();
         for (int i = 0; i < num; i++) {
-            Work dateOfWorker = new Work();
+            Worker dateOfWorker = new Worker();
             System.out.println("\n Worker num " + (i + 1) + " ");
 
             // Name

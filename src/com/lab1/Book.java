@@ -1,7 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
 
 package com.lab1;
 
@@ -33,16 +29,14 @@ public class Book {
         return this.seller;
     }
 
-    public void setSeller(String seller) {
-        this.seller = seller;
-    }
+    public void setSeller(String seller) {this.seller = seller.strip();}
 
     public String getTitle() {
         return this.title;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = title.strip();
     }
 
     public int getQuantity() {
@@ -50,7 +44,7 @@ public class Book {
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        this.quantity = quantity >0?quantity:-1;
     }
 
     public double getPrice() {
@@ -58,7 +52,7 @@ public class Book {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        this.price = price >0 ? price:-1;
     }
 
     public Date getDateOfSale() {

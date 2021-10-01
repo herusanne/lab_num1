@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.Scanner;
 import java.util.Calendar;
 
-public class Work {
+public class Worker {
     /*Фамилия
     Имя
     Отчество
@@ -28,7 +28,7 @@ public class Work {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.firstName = firstName.strip();
     }
 
     public String getLastName() {
@@ -36,7 +36,7 @@ public class Work {
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastName = lastName.strip();
     }
 
     public String getPosition() {
@@ -44,7 +44,7 @@ public class Work {
     }
 
     public void setPosition(String position) {
-        this.position = position;
+        this.position = position.strip();
     }
 
     public int getSalary() {
@@ -52,7 +52,7 @@ public class Work {
     }
 
     public void setSalary(int salary) {
-        this.salary = salary;
+        this.salary = salary> 0 ? salary : -1;
     }
 
     public String getDateOfBirth() {
